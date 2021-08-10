@@ -1,0 +1,26 @@
+[package]
+name = "warehouse-service"
+version = "0.1.0"
+authors = ["wh75er"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = { version = "0.4.19", features = ["serde"] }
+diesel = { version = "1.4.5", features = ["chrono", "postgres", "uuidv07"] }
+diesel_migrations = "1.4.0"
+dotenv = "0.15.0"
+rocket = "0.4.6"
+r2d2 = "0.8.9"
+serde = { version = "1.0.117", features = ["derive"] }
+uuid = { version = "0.8.1", features = ["serde", "v4"]}
+reqwest = { version = "0.10.9", features = ["blocking", "json"] }
+rocket_cors = "0.5.1"
+http-auth-basic = "0.1.2"
+lazy_static = "1.4.0"
+
+[dependencies.rocket_contrib]
+version = "0.4.6"
+default-features = true
+features = ["diesel_postgres_pool"]

@@ -1,0 +1,8 @@
+[workspace]
+
+members = [
+  "store-service",
+  "order-service",
+  "warehouse-service",
+  "warranty-service"
+]
